@@ -6,6 +6,7 @@ import About from "./pages/About/About";
 import Login from "./pages/Login/Login";
 import Contador from "./components/States/Contador";
 import ThemeMode from "./components/States/ThemeMode";
+import Form from "./components/Form/Form";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <hr />
       <Contador />
       <ThemeMode />
+      <Form />
     </div>
   );
 }

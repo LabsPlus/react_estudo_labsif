@@ -10,7 +10,7 @@ let Ul = styled.ul`
 `;
 
 const MostrarLista = ({ listaAmigos }) => {
-  const lista = listaAmigos.map((amigo) => <li>{amigo}</li>);
+  const lista = listaAmigos.map((amigo) => <li key={amigo}>{amigo}</li>);
 
   return (
     <div>
