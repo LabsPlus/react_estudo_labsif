@@ -3,10 +3,8 @@ import styles from "./App.module.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About/About";
-import Login from "./pages/Login/Login";
-import Contador from "./components/States/Contador";
-import ThemeMode from "./components/States/ThemeMode";
 import Form from "./components/Form/Form";
+import Users from "./pages/Users/Users";
 
 function App() {
   return (
@@ -15,12 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<ContenedorAmigos />} />
         <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/login" element={<Form />} />
       </Routes>
-      <hr />
-      <Contador />
-      <ThemeMode />
-      <Form />
     </div>
   );
 }
