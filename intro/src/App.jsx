@@ -1,9 +1,9 @@
-import ContenedorAmigos from "./components/ContenedorAmigos/ContenedorAmigos";
+import ContenedorAmigos from "./pages/ContenedorAmigos/ContenedorAmigos";
 import styles from "./App.module.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About/About";
-import Form from "./components/Form/Form";
+import Form from "./pages/Form/Form";
 import Users from "./pages/Users/Users";
 
 function App() {
