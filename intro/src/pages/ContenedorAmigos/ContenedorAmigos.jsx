@@ -7,12 +7,15 @@ import styles from "./ContenedorAmigos.module.css";
 import { CounterContext } from "../../context/CounterContex";
 import { useContext } from "react";
 import ChangeCounter from "../../components/ChangeCounter";
+import { useSelector } from "react-redux";
 
 const ContenedorAmigos = () => {
   const { counter } = useContext(CounterContext);
 
   let nome = "Christopher";
   let listaAmigos = ["Lucas", "Jose", "Gaston"];
+
+  const counterGlobal = useSelector((state) => state.count);
 
   return (
     <div>
@@ -22,6 +25,7 @@ const ContenedorAmigos = () => {
       <ThemeMode />
       <h3>Counter do Context {counter} </h3>
       <ChangeCounter />
+      <h3>Counter do Redux {counterGlobal}</h3>
     </div>
   );
 };
