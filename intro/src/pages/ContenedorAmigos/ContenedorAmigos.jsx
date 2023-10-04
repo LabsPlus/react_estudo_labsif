@@ -7,7 +7,10 @@ import styles from "./ContenedorAmigos.module.css";
 import { CounterContext } from "../../context/CounterContex";
 import { useContext } from "react";
 import ChangeCounter from "../../components/ChangeCounter";
-import { useSelector } from "react-redux";
+
+//redux
+import { useSelector, useDispatch } from "react-redux";
+import { aumetar } from "../../redux/actions";
 
 const ContenedorAmigos = () => {
   const { counter } = useContext(CounterContext);
@@ -15,6 +18,9 @@ const ContenedorAmigos = () => {
   let nome = "Christopher";
   let listaAmigos = ["Lucas", "Jose", "Gaston"];
 
+  //dispatch das actions
+  const dispatch = useDispatch();
+  //estado global
   const counterGlobal = useSelector((state) => state.count);
 
   return (
@@ -26,6 +32,7 @@ const ContenedorAmigos = () => {
       <h3>Counter do Context {counter} </h3>
       <ChangeCounter />
       <h3>Counter do Redux {counterGlobal}</h3>
+      <button onClick={() => dispatch(aumetar())}>Aumetar count redux</button>
     </div>
   );
 };

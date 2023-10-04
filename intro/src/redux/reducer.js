@@ -1,13 +1,12 @@
 import { AUMETAR_COUNT } from "./actions";
 
 const initialState = {
-  count: 2,
+  count: 1,
 };
 
-const reducer = (state = initialState, { type, payload }) => {
-  switch (type) {
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
     case AUMETAR_COUNT:
-      console.log(state.count, "entre");
       return {
         ...state,
         count: state.count + 1,
